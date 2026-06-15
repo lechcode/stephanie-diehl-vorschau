@@ -1,15 +1,16 @@
 <!doctype html>
+<!-- Stephanie Diehl — Enthüllungsseite (persönliches Geschenk, Du-Form, ohne Preisblock) · Lechcode 15.06.2026 · Master-Prompt v1.7 -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Für dich, Stephanie 🌿</title>
+<title>Für dich, Steffi 🌿</title>
 <meta name="theme-color" content="#3A4D40">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:title" content="Hallo Stephanie — eine Überraschung für dich 🌿">
-<meta property="og:description" content="Deine Website, einmal ganz neu gedacht — ein kleines Geschenk.">
+<meta property="og:title" content="Eine kleine Überraschung für dich, Steffi 🥰">
+<meta property="og:description" content="Deine Website, einmal ganz neu gedacht — schneller, ruhiger, mit deinen Bildern. Schau rein, unverbindlich, von Lenny & Michael.">
 <meta property="og:image" content="assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="assets/og.jpg">
@@ -17,73 +18,307 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--linen:#FBF8F2;--sand:#EFE8DA;--ink:#2E332E;--ink-soft:#5E5F52;--moss:#4C6152;--moss-deep:#3A4D40;--night:#26302A;--clay:#BB7350;--gold:#C2A35E;--line:rgba(46,51,46,.13);--serif:'Fraunces','Fraunces Fallback',Georgia,serif;--sans:'Karla','Karla Fallback',Arial,sans-serif}
-body{background:var(--linen);color:var(--ink);font-family:var(--sans);line-height:1.7;font-size:18px;-webkit-font-smoothing:antialiased}
-.wrap{max-width:760px;margin:0 auto;padding:0 24px}
-h1,h2{font-family:var(--serif);font-weight:600;line-height:1.14;letter-spacing:-.01em}
-em{font-family:var(--serif);font-style:italic}
+:root{
+  --linen:#FBF8F2;--sand:#EFE8DA;--sand-deep:#E3D8C5;--ink:#2E332E;--ink-soft:#5E5F52;--ink-faint:#8A8678;
+  --moss:#4C6152;--moss-deep:#3A4D40;--night:#26302A;--clay:#BB7350;--gold:#C2A35E;
+  --line:rgba(46,51,46,.13);
+  --serif:'Fraunces','Fraunces Fallback',Georgia,serif;--sans:'Karla','Karla Fallback',Arial,sans-serif;
+  --r:16px;--r-lg:24px;--ease:cubic-bezier(.22,.61,.36,1)
+}
+body{background:var(--linen);color:var(--ink);font-family:var(--sans);line-height:1.68;font-size:17.5px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%}
+.wrap{max-width:940px;margin-inline:auto;padding-inline:clamp(20px,5vw,32px)}
+section{padding-block:clamp(48px,7vw,86px)}
+h1,h2{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:-.014em;text-wrap:balance}
+h1{font-size:clamp(33px,6vw,58px)}
+h2{font-size:clamp(26px,3.4vw,40px)}
+em{font-family:var(--serif);font-style:italic;color:var(--moss)}
 a{color:var(--moss-deep)}
-.eyebrow{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--moss)}
-.hero{text-align:center;padding:clamp(70px,12vw,128px) 0 clamp(40px,7vw,66px)}
-.hero h1{font-size:clamp(36px,7vw,64px);margin:.3em 0}
-.hero h1 em{color:var(--moss)}
-.hero p{font-size:clamp(18px,2.4vw,21px);color:var(--ink-soft);max-width:36ch;margin:0 auto}
-.btn{display:inline-flex;align-items:center;gap:.5em;background:var(--moss-deep);color:var(--linen);text-decoration:none;font-weight:700;font-size:16px;padding:15px 30px;border-radius:999px;transition:transform .25s,background .25s}
+.eyebrow{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--moss);display:inline-flex;align-items:center;gap:.7em;margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:2px;border-radius:2px;background:var(--clay)}
+.lead{font-size:clamp(18px,2.2vw,21px);color:var(--ink-soft);max-width:60ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--sans);font-weight:700;font-size:16px;padding:14px 28px;border-radius:999px;min-height:50px;text-decoration:none;background:var(--moss-deep);color:var(--linen);border:1.6px solid transparent;transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s}
 .btn:hover{background:var(--night);transform:translateY(-2px)}
-.sec{padding:clamp(40px,7vw,68px) 0;border-top:1px solid var(--line)}
-.sec h2{font-size:clamp(25px,4vw,36px);margin-bottom:.5em}
-.sec p{color:var(--ink-soft);margin-bottom:14px}
-.pts{display:grid;gap:16px;margin-top:22px}
-.pt{display:grid;grid-template-columns:auto 1fr;gap:15px;align-items:start}
-.pt .d{width:10px;height:10px;border-radius:50%;background:var(--gold);margin-top:9px}
-.pt b{color:var(--ink)}
-.qs{display:grid;gap:13px;margin-top:20px}
-.q{background:var(--sand);border-radius:10px;padding:16px 20px;font-size:16px}
-.q b{color:var(--ink)}
-.center{text-align:center;padding:clamp(34px,6vw,58px) 0}
-footer{text-align:center;padding:50px 24px;color:#8A8678;font-size:14px;border-top:1px solid var(--line)}
-footer a{font-weight:700}
+.btn.zart{background:transparent;border-color:rgba(46,51,46,.28);color:var(--ink)}
+.btn.zart:hover{background:var(--moss-deep);border-color:var(--moss-deep);color:var(--linen)}
+.cta-row{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+
+/* HALLO */
+.hallo{text-align:center;padding-top:clamp(64px,11vw,116px)}
+.hallo .eyebrow{justify-content:center}
+.hallo h1{margin:.25em 0 .5em}
+.hallo .lead{margin:0 auto}
+.hallo .cta-row{justify-content:center}
+
+/* LEITMOTIV-Band (Signatur) */
+.leit{background:var(--moss-deep);color:#EFE8DA;text-align:center;border-radius:var(--r-lg);padding:clamp(28px,4vw,44px) clamp(22px,4vw,40px);margin-top:clamp(40px,6vw,60px)}
+.leit blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,25px);line-height:1.45;color:#fff;max-width:46ch;margin-inline:auto}
+.leit blockquote .hi{color:var(--gold)}
+.leit cite{display:block;margin-top:16px;font-style:normal;font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#bfae8a}
+
+/* VORHER/NACHHER per clip-path: beide Bilder deckungsgleich, oberes wird nur rechts beschnitten */
+.slider{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 18px 50px -22px rgba(46,51,46,.45);touch-action:pan-y;cursor:ew-resize;margin-top:28px;border:1px solid var(--line)}
+.slider img{width:100%;height:auto;display:block;user-select:none;-webkit-user-drag:none}
+.slider .oben{position:absolute;inset:0;clip-path:inset(0 50% 0 0)}
+.griff{position:absolute;top:0;bottom:0;left:50%;width:3px;margin-left:-1.5px;background:#fff;pointer-events:none;box-shadow:0 0 0 1px rgba(46,51,46,.14)}
+.griff-knopf{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;border-radius:50%;background:#fff;box-shadow:0 5px 18px rgba(0,0,0,.32);display:grid;place-items:center}
+.griff-knopf svg{width:24px;height:24px}
+.slider-label{position:absolute;top:14px;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;background:rgba(38,48,42,.84);color:#fff;padding:6px 12px;border-radius:999px;pointer-events:none}
+.slider-label.links{left:14px}.slider-label.rechts{right:14px;background:var(--moss-deep)}
+.hinweis-mini{font-size:14px;color:var(--ink-soft);margin-top:14px;text-align:center}
+
+/* HANDY-REFRAME */
+.phones{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,48px);margin-top:36px;align-items:start;max-width:640px;margin-inline:auto}
+.phone{position:relative;background:linear-gradient(160deg,#2c352e,#1c241e);border-radius:40px;padding:9px;box-shadow:0 24px 50px rgba(46,51,46,.34),inset 0 0 0 1.5px rgba(255,255,255,.10);max-width:250px;margin-inline:auto}
+.phone::before{content:"";position:absolute;left:-2.5px;top:96px;width:2.5px;height:58px;border-radius:2px 0 0 2px;background:#1c241e;box-shadow:0 78px 0 #1c241e}
+.phone::after{content:"";position:absolute;right:-2.5px;top:128px;width:2.5px;height:74px;border-radius:0 2px 2px 0;background:#1c241e}
+.phone .schirm{position:relative;border-radius:32px;overflow:hidden;background:#fff}
+.phone .schirm::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:70px;height:19px;border-radius:999px;background:#1c241e;z-index:2}
+.phone .schirm img{width:100%;height:auto;display:block}
+.phone-titel{text-align:center;margin-top:16px}
+.phone-titel span{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:6px 14px;border-radius:999px;background:rgba(38,48,42,.84);color:#fff}
+.phone-titel.neu span{background:var(--moss-deep)}
+.phone-sub{text-align:center;font-size:13.5px;color:var(--ink-soft);margin-top:9px;max-width:30ch;margin-inline:auto;line-height:1.5}
+@media (max-width:660px){.phones{grid-template-columns:1fr;gap:40px}.phone{max-width:235px}}
+
+/* TACHO */
+.tacho{background:var(--night);color:#E6E2D6;text-align:center}
+.tacho h2{color:#fff}
+.tacho .eyebrow{color:var(--gold);justify-content:center}.tacho .eyebrow::before{background:var(--gold)}
+.tacho-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,30px);margin-top:42px}
+.tacho-zahl{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5.2vw,48px);color:var(--gold);line-height:1.04}
+.tacho-zahl small{font-size:.42em;color:#bfae8a}
+.tacho-grid p{color:#c9c1b1;font-size:14.5px;margin-top:10px;max-width:24ch;margin-inline:auto}
+.tacho-grid strong{color:#fff}
+.tacho .quelle{margin-top:30px;font-size:12.5px;color:#8f8b7e;max-width:64ch;margin-inline:auto}
+@media (max-width:660px){.tacho-grid{grid-template-columns:1fr;gap:30px}}
+
+/* LISTEN (Befunde / drin) */
+.liste{display:grid;gap:14px;margin-top:30px}
+.punkt{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 16px 36px -28px rgba(46,51,46,.4)}
+.punkt .ic{flex:none;width:26px;height:26px;margin-top:2px}
+.punkt strong{display:block;margin-bottom:4px;font-size:17px}
+.punkt p{font-size:14.5px;color:var(--ink-soft);max-width:none}
+.recht{background:var(--sand)}
+.drin{background:var(--sand-deep)}
+.disclaimer{font-size:13px;color:var(--ink-soft);margin-top:18px}
+
+/* SCHLUSS */
+.schluss{background:var(--night);color:#E6E2D6;text-align:center}
+.schluss h2{color:#fff}
+.schluss .eyebrow{color:var(--gold);justify-content:center}.schluss .eyebrow::before{background:var(--gold)}
+.schluss .lead{color:#c9c1b1;margin:0 auto 6px}
+.schluss .cta-row{justify-content:center}
+footer{background:var(--night);border-top:1px solid rgba(255,255,255,.1);color:#8f8b7e;font-size:13px;text-align:center;padding:26px 22px 34px;line-height:1.7}
+footer a{color:#c9c1b1;font-weight:700}
 </style>
 </head>
 <body>
-<main>
-<header class="hero wrap">
-  <span class="eyebrow">Eine Überraschung für dich</span>
-  <h1>Hallo Stephanie —<br>wir haben dir <em>etwas gebaut.</em></h1>
-  <p>Ein kleines Geschenk: deine Website, einmal ganz neu gedacht — so warm und geerdet, wie du Menschen begegnest.</p>
-  <p style="margin-top:30px"><a class="btn" href="index.html">Deine neue Seite ansehen →</a></p>
-</header>
 
-<section class="sec wrap">
-  <span class="eyebrow">Was wir gemacht haben</span>
-  <h2>Deine Arbeit — schön verpackt.</h2>
-  <p>Wir haben uns deine Seite, deine Worte und deine Bilder angeschaut und daraus eine ruhige, hochwertige Vorschau gebaut:</p>
-  <div class="pts">
-    <div class="pt"><span class="d"></span><div><b>Dein Leitgedanke im Mittelpunkt.</b> Dein „Ent-Wicklung"-Satz bekommt eine eigene Bühne — er trägt die ganze Seite.</div></div>
-    <div class="pt"><span class="d"></span><div><b>Deine drei Wege klar gezeigt.</b> Familienaufstellung, Breathwork und Stimme — mit deinen echten Fotos, ruhig gesetzt.</div></div>
-    <div class="pt"><span class="d"></span><div><b>Eine warme, natürliche Farbwelt</b> (Leinen, Moos, ein Hauch Lehm) — passend zu Atem, Natur und deiner Ruhe.</div></div>
-    <div class="pt"><span class="d"></span><div><b>Schnell &amp; ohne Cookie-Banner.</b> Schriften und Bilder laden lokal — keine Verbindung zu fremden Servern.</div></div>
+<!-- HALLO -->
+<section class="hallo">
+  <div class="wrap">
+    <p class="eyebrow">Eine kleine Überraschung für dich, Steffi 🥰</p>
+    <h1>Hallo Steffi —<br>wir haben dir <em>etwas gebaut.</em> 🌿</h1>
+    <p class="lead">Lenny &amp; Michael hier, von Lechcode in Landsberg. Wir sind über deine Arbeit gestolpert — diese ruhige, geerdete Art, mit Menschen zu sein — und fanden: deine Website sollte genau das ausstrahlen. Also haben wir das einfach mal gemacht. Als Geschenk, ganz unverbindlich. Mit deinen echten Bildern, deinen Worten, deinen drei Wegen.</p>
+    <div class="cta-row">
+      <a class="btn" href="index.html">Deine neue Seite ansehen</a>
+      <a class="btn zart" href="#vergleich">Erst den Vergleich sehen</a>
+    </div>
+    <div class="leit">
+      <blockquote>„Entwicklung heißt nicht, dass du etwas dazulernen musst. <span class="hi">Ent-Wicklung</span> heißt, dass etwas von dir abfallen darf …"</blockquote>
+      <cite>— dein Leitgedanke, der jetzt die ganze Seite trägt</cite>
+    </div>
   </div>
 </section>
 
-<section class="sec wrap">
-  <span class="eyebrow">Damit es ganz deins wird</span>
-  <h2>Was wir noch von dir bräuchten.</h2>
-  <p>Kleinigkeiten — kein Stress, in Ruhe:</p>
-  <div class="qs">
-    <div class="q"><b>Deine Fotos.</b> Dürfen wir deine professionellen Bilder verwenden? Falls ein:e Fotograf:in die Rechte hat, holen wir kurz das Okay ein.</div>
-    <div class="q"><b>Impressum-Angaben.</b> Welche Adresse &amp; Telefonnummer sind aktuell richtig (Gerberau 44?) und das Jahr deiner HP-Erlaubnis — damit alles sauber ist.</div>
-    <div class="q"><b>Termine &amp; Zeiten.</b> Magst du feste Sprechzeiten zeigen? Und die aktuellen Kurs-/Circle-Termine pflegen wir natürlich ein.</div>
+<!-- VORHER / NACHHER -->
+<section id="vergleich">
+  <div class="wrap">
+    <p class="eyebrow">Vorher / Nachher</p>
+    <h2>Zieh den Regler — sieh selbst.</h2>
+    <p class="lead" style="margin-top:14px">Links deine heutige Seite, rechts unser Entwurf — deine Inhalte, neue Bühne.</p>
+    <div class="slider" id="slider">
+      <img src="vorschau-assets/slider-neu.jpg" alt="Neuer Website-Entwurf für Stephanie Diehl (Desktop)" width="1000" height="1250">
+      <div class="oben" id="slider-oben">
+        <img src="vorschau-assets/slider-alt.jpg" alt="Bisherige Website von Stephanie Diehl (Desktop)" width="1000" height="1250">
+      </div>
+      <div class="griff" id="griff">
+        <span class="griff-knopf">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 7 5 12l4.5 5M14.5 7 19 12l-4.5 5" stroke="#3A4D40" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+      <span class="slider-label links">Heute</span>
+      <span class="slider-label rechts">Unser Entwurf</span>
+    </div>
+    <p class="hinweis-mini">Tipp: Regler langsam nach rechts ziehen. Beide Ansichten zeigen den Seitenanfang.</p>
   </div>
 </section>
 
-<div class="center wrap">
-  <a class="btn" href="index.html">Deine neue Seite ansehen →</a>
-</div>
-</main>
+<!-- HANDY-REFRAME -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Der erste Eindruck entsteht am Handy</p>
+    <h2>So kommen Besucher heute bei dir an — und so ab jetzt.</h2>
+    <p class="lead" style="margin-top:14px">Über 60&nbsp;% aller Website-Besuche kommen heute vom Smartphone (StatCounter). Genau dort entscheidet sich, ob jemand schreibt.</p>
+    <div class="phones">
+      <div>
+        <div class="phone"><div class="schirm">
+          <img src="vorschau-assets/phone-alt.jpg" alt="Bisherige Website auf dem Smartphone — mit Cookie-Fenster" width="520" height="1125">
+        </div></div>
+        <p class="phone-titel"><span>Heute</span></p>
+        <p class="phone-sub">Erst ein Cookie-Fenster, das nach US-Diensten fragt — die Seite kommt danach</p>
+      </div>
+      <div>
+        <div class="phone"><div class="schirm">
+          <img src="vorschau-assets/phone-neu.jpg" alt="Neuer Entwurf auf dem Smartphone — ruhig, mit Kontaktleiste" width="520" height="1125">
+        </div></div>
+        <p class="phone-titel neu"><span>Unser Entwurf</span></p>
+        <p class="phone-sub">Sofort da, ruhig, mit Anruf-Leiste am Daumen — ganz ohne Cookie-Banner</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TACHO -->
+<section class="tacho">
+  <div class="wrap">
+    <p class="eyebrow">Gemessen, nicht geschätzt</p>
+    <h2>Vorher: über 11&nbsp;Sekunden.<br>Jetzt: unter 3.</h2>
+    <div class="tacho-grid">
+      <div>
+        <div class="tacho-zahl">11,5&nbsp;<small>s</small> → 2,6&nbsp;<small>s</small></div>
+        <p>bis das Wichtigste sichtbar ist (mobil) — <strong>über 4× schneller</strong></p>
+      </div>
+      <div>
+        <div class="tacho-zahl">fast&nbsp;8×</div>
+        <p>leichter pro Seitenaufruf (<strong>2,49&nbsp;MB → 0,32&nbsp;MB</strong>) — gut für Ungeduldige und für Google</p>
+      </div>
+      <div>
+        <div class="tacho-zahl">97</div>
+        <p>Google-Performance, mobil (<strong>vorher: 62</strong>)</p>
+      </div>
+    </div>
+    <p class="quelle">Messung: Google Lighthouse, mobil, je 3 Läufe (Median), 15.06.2026 · deine Seite live (stephanie-diehl.com) · neue Seite als fertige Vorschau mit deinen Bildern.</p>
+  </div>
+</section>
+
+<!-- DAS HABEN WIR MITGEDACHT -->
+<section class="recht">
+  <div class="wrap">
+    <p class="eyebrow">Sorgfalt im Kleingedruckten</p>
+    <h2>Das haben wir dir gleich mitgedacht</h2>
+    <p class="lead" style="margin-top:14px">Nichts davon ist dramatisch — aber es sind Dinge, die kritische Besucher (und Abmahn-Anwälte) finden. Im Entwurf sind sie von Anfang an sauber gelöst:</p>
+    <div class="liste">
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" stroke="#BB7350" stroke-width="1.8"/><path d="M3 9h18" stroke="#BB7350" stroke-width="1.8"/><circle cx="6.5" cy="6.5" r=".9" fill="#BB7350"/></svg>
+        <div><strong>Cookie-Banner &amp; US-Dienste — im Entwurf gar nicht mehr nötig.</strong>
+        <p>Deine heutige Seite bindet eine Google-Karte ein und fragt deshalb per Banner nach Cookies („Daten an US-Anbieter wie Google"). Der Entwurf kommt ganz ohne Cookies, ohne Tracking, ohne fremde Server aus — Schriften und Bilder liegen lokal, statt einer eingebetteten Karte gibt es einen schlichten „Route öffnen"-Link. Kein Banner, schnellerer Start, datensparsam.</p></div>
+      </div>
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.2 7.6 8 9 4.8-1.4 8-4.5 8-9V6l-8-3Z" stroke="#BB7350" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.7 12 2.2 2.2 4.4-4.6" stroke="#BB7350" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <div><strong>Im Impressum steht ein veralteter Paragraf.</strong>
+        <p>Dort wird noch „§&nbsp;5 TMG" genannt. Das Telemediengesetz wurde im Mai 2024 vom Digitale-Dienste-Gesetz abgelöst — heute korrekt ist „§&nbsp;5 DDG". Im Entwurf ist das schon aktualisiert. (Das ist keine Rechtsberatung, nur ein Hinweis.)</p></div>
+      </div>
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="#BB7350" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <div><strong>Eine Seite heißt noch „neue-seite-2".</strong>
+        <p>Im Menü deiner jetzigen Seite ist ein Baukasten-Platzhalter übrig geblieben, und es gibt viele, teils fast gleiche Einträge (mehrere Workshop- und Seminar-Punkte). Im Entwurf führt eine klare, ruhige Struktur — man findet sich sofort zurecht.</p></div>
+      </div>
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19c2.5-8 5.5-12 8-12s5.5 4 8 12" stroke="#BB7350" stroke-width="1.8" stroke-linecap="round"/><path d="M9 13h6" stroke="#BB7350" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <div><strong>Baukasten — oder handgebaut.</strong>
+        <p>Deine Seite läuft auf einem Worldsoft-Baukasten: solide, aber generisch und eher träge. Der Entwurf ist eine einzige, handgebaute Datei — schlank, schnell und ganz auf dich zugeschnitten.</p></div>
+      </div>
+    </div>
+    <p class="disclaimer">Transparenz: keine Rechtsberatung — nur das, was uns beim sorgfältigen Hinsehen aufgefallen ist.</p>
+  </div>
+</section>
+
+<!-- WAS SCHON DRIN IST -->
+<section class="drin">
+  <div class="wrap">
+    <p class="eyebrow">Was schon drinsteckt</p>
+    <h2>Deine Bilder, deine Worte, dein Leitgedanke</h2>
+    <div class="liste">
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#4C6152" stroke-width="1.8"/><circle cx="9" cy="11" r="2" stroke="#4C6152" stroke-width="1.8"/><path d="m5 19 5-5 3 3 4-4 2 2" stroke="#4C6152" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <div><strong>Deine echten Fotos sind schon eingebaut.</strong>
+        <p>Dein Porträt im Auftakt und deine drei Wege — Aufstellung, Atem, Stimme — ruhig gesetzt und fürs Web optimiert (lädt rund 8× leichter). Eine Bitte fürs offizielle Live-Gehen: sag uns kurz, wer fotografiert hat, damit die Rechte sauber sind.</p></div>
+      </div>
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 8h10M7 12h7" stroke="#4C6152" stroke-width="1.8" stroke-linecap="round"/><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-4 4V6a2 2 0 0 1 2-2Z" stroke="#4C6152" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <div><strong>Dein „Ent-Wicklung"-Satz bekommt eine eigene Bühne.</strong>
+        <p>Er steht in goldener Schrift mitten auf der Seite — als Leitgedanke, der alles zusammenhält. Genau so, wie er deine Arbeit beschreibt.</p></div>
+      </div>
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 4 2.2 4.8 5.3.6-4 3.6 1.1 5.2L12 15.9 7.4 18.8l1.1-5.2-4-3.6 5.3-.6L12 4Z" stroke="#4C6152" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <div><strong>Deine Stimmen &amp; Referenzen sind schön gesetzt.</strong>
+        <p>Die Erfahrungsberichte und deine Team-Seminare (u.&nbsp;a. Endress+Hauser, Landratsamt Emmendingen) haben ihren Platz — alles HWG-sicher formuliert, ohne Heilversprechen, mit ruhigem Krisen-Hinweis.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAS WIR NOCH BRAUCHEN -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Damit es ganz deins wird</p>
+    <h2>Was wir noch von dir bräuchten</h2>
+    <p class="lead" style="margin-top:14px">Kleinigkeiten — kein Stress, in Ruhe:</p>
+    <div class="liste">
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#4C6152" stroke-width="1.8"/><circle cx="9" cy="11" r="2" stroke="#4C6152" stroke-width="1.8"/><path d="m5 19 5-5 3 3 4-4 2 2" stroke="#4C6152" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <div><strong>Deine Fotos.</strong><p>Dürfen wir deine professionellen Bilder verwenden? Falls ein:e Fotograf:in die Rechte hat, holen wir kurz das Okay ein.</p></div>
+      </div>
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.2 7.6 8 9 4.8-1.4 8-4.5 8-9V6l-8-3Z" stroke="#4C6152" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <div><strong>Impressum-Angaben.</strong><p>Welche Adresse &amp; Telefonnummer sind aktuell richtig (Gerberau&nbsp;44?), und das Jahr deiner HP-Erlaubnis &amp; die zuständige Behörde — damit alles sauber ist.</p></div>
+      </div>
+      <div class="punkt">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2" stroke="#4C6152" stroke-width="1.8"/><path d="M4 9h16M8 3v4M16 3v4" stroke="#4C6152" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <div><strong>Termine &amp; Zeiten.</strong><p>Magst du feste Sprechzeiten zeigen? Und die aktuellen Kurs- und Circle-Termine pflegen wir natürlich ein.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHLUSS -->
+<section class="schluss">
+  <div class="wrap">
+    <p class="eyebrow">Ohne Haken, versprochen</p>
+    <h2>Schau in Ruhe — und sag uns, wie es sich anfühlt.</h2>
+    <p class="lead">Diese Vorschau ist privat, für Suchmaschinen unsichtbar und ein Geschenk. Wenn du magst, machen wir sie zusammen fertig und ziehen sie auf stephanie-diehl.com um — wie genau, besprechen wir entspannt persönlich. Und wenn du sie nicht willst: auch gut, dann löschen wir sie wieder. Deine Arbeit hat uns einfach Lust gemacht, das zu bauen.</p>
+    <div class="cta-row">
+      <a class="btn" style="background:var(--gold);color:var(--night)" href="index.html">Deine neue Seite ansehen</a>
+      <a class="btn zart" style="border-color:var(--gold);color:var(--gold)" href="mailto:info@lechcode.de?subject=Meine%20Vorschau%20%E2%80%94%20lass%20uns%20reden">Lenny &amp; Michael schreiben</a>
+    </div>
+  </div>
+</section>
+
 <footer>
-  Unverbindliche Design-Vorschau · für dich gebaut von <b>Lechcode</b>.<br>
-  Schreib uns jederzeit: <a href="mailto:info@lechcode.de">info@lechcode.de</a> · noch ganz privat, nur für dich.
+  Mit 🌿 gebaut von <a href="mailto:info@lechcode.de">Lechcode</a>, Landsberg am Lech (Lenny&nbsp;Schönbach &amp; Michael&nbsp;Storz)<br>
+  Unverbindliche Geschenk-Vorschau für Stephanie Diehl · nicht öffentlich verlinkt, noindex · deine Fotos bleiben deine Fotos — auf Wunsch ist alles sofort gelöscht.
 </footer>
+
+<script>
+(function(){
+  var slider=document.getElementById('slider');
+  var oben=document.getElementById('slider-oben');
+  var griff=document.getElementById('griff');
+  function setze(x){
+    var r=slider.getBoundingClientRect();
+    var p=Math.max(2,Math.min(98,(x-r.left)/r.width*100));
+    oben.style.clipPath='inset(0 '+(100-p)+'% 0 0)';
+    griff.style.left=p+'%';
+  }
+  var aktiv=false;
+  slider.addEventListener('pointerdown',function(e){aktiv=true;try{slider.setPointerCapture(e.pointerId)}catch(_){}anim(e.clientX)});
+  slider.addEventListener('pointermove',function(e){if(aktiv)setze(e.clientX)});
+  slider.addEventListener('pointerup',function(){aktiv=false});
+  slider.addEventListener('pointercancel',function(){aktiv=false});
+  function anim(x){setze(x)}
+})();
+</script>
 </body>
 </html>
