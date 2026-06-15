@@ -202,9 +202,14 @@ textarea{min-height:110px;resize:vertical}
 .ort .pin{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--clay);font-weight:700}
 .ort a.btn{margin-top:16px}
 .ort-karte{position:relative;background:var(--sand);border:1px solid var(--line);border-radius:var(--r-lg);aspect-ratio:4/3;overflow:hidden;box-shadow:var(--shadow)}
-.ort-karte img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
-.ort-karte figcaption{position:absolute;right:9px;bottom:9px;font-size:10.5px;line-height:1.3;color:#fff;background:rgba(38,48,42,.56);padding:3px 9px;border-radius:8px;letter-spacing:.01em}
-.ort-karte figcaption a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.ort-karte .ort-map{width:100%;height:100%;object-fit:cover}
+.ort-maps-link{position:absolute;inset:0;display:block;z-index:1}
+.ort-maps-btn{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:.45em;background:var(--moss-deep);color:var(--linen);font-weight:700;font-size:13.5px;padding:9px 16px;border-radius:var(--r-pill);box-shadow:0 6px 18px -8px rgba(46,51,46,.6);white-space:nowrap;transition:background .25s,transform .25s}
+.ort-karte:hover .ort-maps-btn{background:var(--night);transform:translateX(-50%) translateY(-2px)}
+.ort-pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);z-index:2;pointer-events:none}
+.ort-pin svg{width:40px;height:40px;filter:drop-shadow(0 4px 6px rgba(46,51,46,.5))}
+.ort-attrib{position:absolute;right:8px;top:8px;z-index:3;font-size:10px;line-height:1;color:var(--ink-soft);background:rgba(251,248,242,.85);padding:3px 7px;border-radius:7px}
+.ort-attrib a{color:var(--ink-soft);text-decoration:underline}
 
 /* FOOTER */
 footer{background:var(--night);color:#b7b3a5;padding-block:clamp(44px,6vw,66px) 30px;font-size:14.5px;border-top:1px solid rgba(255,255,255,.1)}
@@ -470,8 +475,12 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
         <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Gerberau+44+79098+Freiburg" target="_blank" rel="noopener">Route öffnen →</a>
       </div>
       <figure class="ort-karte">
-        <img src="assets/anfahrt-freiburg.jpg" width="960" height="720" loading="lazy" decoding="async" alt="Historische Häuser am Gewerbekanal in der Freiburger Altstadt, unweit der Praxis">
-        <figcaption>Freiburger Altstadt am Wasser · Foto: Giftzwerg 88, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.de" target="_blank" rel="noopener">CC&nbsp;BY-SA&nbsp;3.0</a></figcaption>
+        <img class="ort-map" src="assets/anfahrt-karte.jpg" width="960" height="720" loading="lazy" decoding="async" alt="Karte: Lage der Praxis in der Gerberau 44 in der Freiburger Altstadt">
+        <span class="ort-pin" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Z" fill="#BB7350" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="9" r="2.4" fill="#fff"/></svg></span>
+        <a class="ort-maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=Gerberau+44+79098+Freiburg" target="_blank" rel="noopener" aria-label="Standort Gerberau 44 auf Google Maps öffnen">
+          <span class="ort-maps-btn">Auf Google&nbsp;Maps öffnen ↗</span>
+        </a>
+        <small class="ort-attrib">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></small>
       </figure>
     </div>
   </div>
