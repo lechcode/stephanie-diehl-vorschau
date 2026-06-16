@@ -234,12 +234,17 @@ footer ul{list-style:none;display:grid;gap:9px}footer a{color:#b7b3a5}footer a:h
   .navlinks a:not(.btn){font-size:23px;font-family:var(--serif);font-weight:600}
   .menu-open .navlinks{transform:none}.burger{display:flex;z-index:45}
   .hero-grid,.ueber-grid,.kontakt-grid,.orte{grid-template-columns:1fr}
-  .hero-grid{gap:38px}.portrait{max-width:440px;margin-inline:auto;order:-1}
+  .hero-grid{gap:28px}.portrait{max-width:230px;margin-inline:auto;order:-1}
+  .portrait img{height:auto;aspect-ratio:4/5;object-position:44% 15%}
+  .portrait::after{inset:auto auto -10px -10px}
   .ueber-figur{position:static;max-width:380px}
   .trust .wrap{grid-template-columns:1fr 1fr;gap:22px}
   .anliegen-grid,.karten,.steps,.stimmen-grid{grid-template-columns:1fr}
-  body{padding-bottom:64px}
-  .sticky{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;inset:auto 0 0;z-index:60;background:var(--night);border-top:1px solid rgba(255,255,255,.12)}
+  body{padding-bottom:0}
+  .foot-top{grid-template-columns:1fr 1fr;gap:26px 22px;padding-bottom:26px}
+  .foot-top>div:first-child{grid-column:1/-1}
+  footer{padding-bottom:90px}
+  .sticky{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;inset:auto 0 0;z-index:60;background:var(--night);border-top:1px solid rgba(255,255,255,.12);box-shadow:0 -8px 24px -12px rgba(0,0,0,.5);padding-bottom:env(safe-area-inset-bottom)}
   .sticky a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 4px;color:#E6E2D6;font-size:11.5px;font-weight:700;text-decoration:none}
   .sticky svg{width:20px;height:20px;color:var(--gold)}
 }
